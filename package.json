@@ -22,15 +22,15 @@
   },
   "homepage": "https://github.com/barretlee/online-markdown",
   "dependencies": {
-    "copy-webpack-plugin": "~4.0.1"
+    "copy-webpack-plugin": "^4.6.0"
   },
   "devDependencies": {
-    "css-loader": "^0.26.1",
+    "css-loader": "^2.1.0",
     "file-loader": "^0.10.0",
     "jsx-loader": "^0.13.2",
     "less": "^2.7.2",
-    "less-loader": "^2.2.3",
-    "style-loader": "^0.13.1",
+    "less-loader": "^4.1.0",
+    "style-loader": "^0.23.1",
     "url-loader": "^0.5.7",
     "webpack": "^2.2.1"
   }

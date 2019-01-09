@@ -96,7 +96,7 @@ var OnlineMarkdown = {
   updateOutput: function () {
     var val = converter.makeHtml($('#input').val());
     $('#output .wrapper').html(val);
-    PR.prettyPrint();
+    // PR.prettyPrint();
     $('#outputCtt li').each(function() {
       $(this).html('<span><span>' + $(this).html() + '</span></span>');
     });

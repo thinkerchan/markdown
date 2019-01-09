@@ -5,10 +5,10 @@
 body {
     padding: 0;
     margin: 0;
-    font-family: Helvetica, Arial, sans-serif;
-    font-size: 16px;
-    line-height: 1.5;
-    color: #50616D;
+    font-family: -apple-system-font,BlinkMacSystemFont,"Helvetica Neue","PingFang SC","Hiragino Sans GB","Microsoft YaHei UI","Microsoft YaHei",Arial,sans-serif;
+    font-size: 15px;
+    line-height: 1.6em;
+    color: rgb(60, 60, 60);
 }
 
 a {
@@ -30,6 +30,12 @@ img {
   max-width: 100%;
 }
 
+p>img{
+  text-align: center;
+  display: block;
+  margin: 0 auto;
+}
+
 h1, h2, h3, h4, h5, h6 {
     margin-top: 1.5rem;
     margin-bottom: 1rem;
@@ -38,8 +44,21 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 p {
-  margin-bottom: 15px;
-  margin-top: 15px;
+  margin-bottom: 20px;
+  margin-top: 20px;
+  text-align: justify;
+  font-size: 15px;
+  letter-spacing: 1px;
+  line-height: 1.6em;
+}
+blockquote>p{
+  letter-spacing: 0px;
+}
+li p span{
+  font-size: 14px;
+  line-height: 1.4em;
+  font-weight: bold;
+  color: #000;
 }
 
 pre p {

@@ -1,0 +1,8 @@
+.wrapper {
+  font-size: 15px!important;
+}
+
+.wrapper ul li span, .wrapper ol li span {
+  line-height: 1.4em;
+  font-size: 14px !important;
+}
