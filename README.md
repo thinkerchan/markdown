@@ -4,7 +4,7 @@
 
 ## 样例
 
-点击链接可以直接使用：https://thinkerchan.com/markdown/
+点击链接可以直接使用：https://thinkerchan.com/md/
 
 ## 改进内容：
 
