@@ -1895,7 +1895,7 @@ showdown.subParser('images', function (text, options, globals) {
     }
 
     result += ' />';
-
+    // console.log(result)
     return result;
   }
 

@@ -1,61 +1,61 @@
 * {
-    box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 body {
-    padding: 0;
-    margin: 0;
-    font-family: -apple-system-font,BlinkMacSystemFont,"Helvetica Neue","PingFang SC","Hiragino Sans GB","Microsoft YaHei UI","Microsoft YaHei",Arial,sans-serif;
-    font-size: 15px;
-    line-height: 1.6em;
-    color: rgb(60, 60, 60);
+
+  font-family: -apple-system-font,BlinkMacSystemFont,"Helvetica Neue","PingFang SC","Hiragino Sans GB","Microsoft YaHei UI","Microsoft YaHei",Arial,sans-serif;
+  font-size: 14px;
+  line-height: 1.6em;
+  color: #333;
 }
 
 a {
-    color: #1e6bb8;
-    text-decoration: none;
+  color: #1e6bb8;
+  text-decoration: none;
 }
 
 a:hover {
-    text-decoration: underline;
+  text-decoration: underline;
 }
 
 :first-child {
-    margin-top: 0;
+  margin-top: 0;
 }
 
 img {
-  // border-radius: 6px;
-  // border: 2px solid #EEE;
-  box-shadow: 0 1px 4px rgba(0,0,0,0.3);
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3);
   max-width: 100%;
 }
 
-p>img{
+p>img {
   text-align: center;
   display: block;
   margin: 0 auto;
 }
 
 h1, h2, h3, h4, h5, h6 {
-    margin-top: 1.5rem;
-    margin-bottom: 1rem;
-    font-weight: normal;
-    color: #159957;
+  margin-top: 1.5rem;
+  margin-bottom: 0.4rem;
+  font-weight: normal;
+  // color: #1A73E8;
+  color: #111;
+  // color: #44B549;
+  position: relative;
 }
 
 p {
   margin-bottom: 20px;
-  margin-top: 20px;
+  // margin-top: 20px;
   text-align: justify;
-  font-size: 15px;
-  letter-spacing: 1px;
-  line-height: 1.6em;
+  color:rgb(51, 51, 51);
 }
-blockquote>p{
+
+blockquote>p {
   letter-spacing: 0px;
 }
-li p span{
+
+li p span {
   font-size: 14px;
   line-height: 1.4em;
   font-weight: bold;
@@ -66,31 +66,30 @@ pre p {
   margin: 0;
 }
 
-pre ul,
-pre ol {
-    margin: 0;
-    padding-top: 12px;
-    padding-bottom: 12px;
+pre ul, pre ol {
+  margin: 0;
+  padding-top: 12px;
+  padding-bottom: 12px;
 }
 
 pre code, pre tt {
-    display: inline;
-    // max-width: initial;
-    padding: 0;
-    margin: 0;
-    overflow: initial;
-    line-height: inherit;
-    word-wrap: normal;
-    // background-color: transparent;
-    border: 0;
+  display: inline;
+  // max-width: initial;
+  padding: 0;
+  margin: 0;
+  overflow: initial;
+  line-height: inherit;
+  word-wrap: normal;
+  // background-color: transparent;
+  border: 0;
 }
 
 pre code:before, pre code:after, pre tt:before, pre tt:after {
-    content: normal;
+  content: normal;
 }
 
 ul, ol {
-    margin-top: 0;
+  margin-top: 0;
 }
 
 blockquote {
@@ -104,45 +103,45 @@ blockquote {
   background: #f2f7fb;
 }
 
-blockquote > :first-child {
-    margin-top: 0;
+blockquote >:first-child {
+  margin-top: 0;
 }
 
-blockquote > :last-child {
-    margin-bottom: 0;
+blockquote >:last-child {
+  margin-bottom: 0;
 }
 
 table {
-    display: block;
-    width: 100%;
-    overflow: auto;
-    word-break: normal;
-    word-break: keep-all;
+  display: block;
+  width: 100%;
+  overflow: auto;
+  word-break: normal;
+  word-break: keep-all;
 }
 
 table th {
-    font-weight: bold;
+  font-weight: bold;
 }
 
 table th, table td {
-    padding: 0.5rem 1rem;
-    border: 1px solid #e9ebec;
+  padding: 0.5rem 1rem;
+  border: 1px solid #e9ebec;
 }
 
 dl {
-    padding: 0;
+  padding: 0;
 }
 
 dl dt {
-    padding: 0;
-    margin-top: 1rem;
-    font-size: 1rem;
-    font-weight: bold;
+  padding: 0;
+  margin-top: 1rem;
+  font-size: 1rem;
+  font-weight: bold;
 }
 
 dl dd {
-    padding: 0;
-    margin-bottom: 1rem;
+  padding: 0;
+  margin-bottom: 1rem;
 }
 
 hr {
@@ -150,4 +149,163 @@ hr {
   margin: 1.5rem 0;
   border: none;
   border-top: 1px dashed #A5A5A5;
+}
+
+button, textarea, select {
+  outline: none;
+}
+
+body,html {
+  overflow: hidden;
+}
+
+ol {
+  list-style-type: decimal !important;
+}
+
+// wechat fix
+.prettyprint {
+  font-family: Consolas, Menlo, Courier, monospace;
+}
+
+.prettyprint pre p {
+  min-height: 10px;
+}
+
+#list1 ul {
+  padding-left: 10px;
+}
+
+ul li.task-list-list {
+  list-style-type: none;;
+  padding: 0 10px;
+}
+
+ul, ol {
+  margin: 0;
+  padding: 0;
+  padding-left: 40px;
+}
+
+.task-list-list {
+  margin: 0;
+  padding: 0;
+}
+
+table {
+  display: table;
+  width: 100%;
+}
+
+table tr:nth-child(2n) {
+  background-color: #f8f8f8;
+}
+
+.task-list-list.checked {
+  color: #159957;
+}
+
+.task-list-list.uncheck {
+  color: #bfc1bf;
+}
+
+.task-list-list img {
+  height: 20px;
+  width: 20px;
+  margin: 0 10px;
+  top: 4px;
+  position: relative;
+}
+
+.super {
+
+}
+
+h1.super {
+  white-space: normal;
+  border: none;
+  margin: 5px 0 0;
+  padding: 10px;
+  font-size: 24px;
+  line-height: 20px;
+  border-left-width: 6px;
+  border-left-style: solid;
+  border-radius: 3px;
+  color: #FFFBF0;
+  border-left-color: #30DFF3;
+  background-color: #4B5CC4;
+}
+
+h2.super {
+  white-space: normal;
+  border: none;
+  margin: 5px 0 0;
+  padding: 10px;
+  font-size: 20px;
+  line-height: 20px;
+  border-left-width: 12px;
+  border-left-style: solid;
+  border-radius: 3px;
+  color: #FFFBF0;
+  border-left-color: #30DFF3;
+  background-color: #4B5CC4;
+}
+
+h3.super {
+  white-space: normal;
+  border: none;
+  margin: 5px 0 0;
+  padding: 10px;
+  font-size: 18px;
+  line-height: 20px;
+  border-left-width: 18px;
+  border-left-style: solid;
+  border-radius: 3px;
+  color: #FFFBF0;
+  border-left-color: #30DFF3;
+  background-color: #4B5CC4;
+}
+
+h4.super {
+  white-space: normal;
+  border: none;
+  margin: 5px 0 0;
+  padding: 10px;
+  font-size: 16px;
+  line-height: 20px;
+  border-left-width: 24px;
+  border-left-style: solid;
+  border-radius: 3px;
+  color: #FFFBF0;
+  border-left-color: #30DFF3;
+  background-color: #4B5CC4;
+}
+
+ruby {
+  background-color: rgba(67, 193, 105, 0.5);
+  margin: 4px;
+  padding-right: 2px;
+  padding-left: 2px;
+}
+
+ruby rt {
+  font-style: italic;
+  background-color: rgba(67, 193, 105, 0.2);
+}
+
+.icon_uncheck, .icon_check {
+  display: inline-block;
+  vertical-align: middle;
+  width: 20px;
+  height: 20px;
+  background-repeat: no-repeat;
+  background-size: contain;
+  margin-right: 4px;
+}
+
+.icon_check {
+  // background-image: url(../imgs/checked.png);
+}
+.icon_uncheck {
+  // background-image: url(../imgs/uncheck.png);
 }

@@ -24,9 +24,9 @@ $.each(kv, function(index, item) {
 });
 
 // 方便跨域加载资源
-if (/\.barretlee\.com$/.test(location.hostname)) {
-  document.domain = 'barretlee.com';
-}
+// if (/\.barretlee\.com$/.test(location.hostname)) {
+//   document.domain = 'barretlee.com';
+// }
 
 
 var converter =  new showdown.Converter({
@@ -42,13 +42,17 @@ var OnlineMarkdown = {
   init: function() {
     var self = this;
     self.load().then(function() {
-      self.start()
+      self.start(function(){
+        if (window.location.href.indexOf('dev')>-1) {
+          $('.convert-button').click();
+        }
+      })
     }).fail(function(){
       self.start();
     });
   },
-  start: function() {
-    this.bindEvt();
+  start: function(cb) {
+    this.bindEvt(cb);
     this.updateOutput();
     new CodeTheme();
     new PageTheme();
@@ -64,14 +68,16 @@ var OnlineMarkdown = {
       },
       timeout: 2000
     }).then(function(data) {
+      // console.log(data)
       $('#input').val(data);
     });
   },
-  bindEvt: function() {
+  bindEvt: function(cb) {
     var self = this;
     $('#input').on('input keydown paste', self.updateOutput);
     var $copy = $('.copy-button');
     var $convert = $('.convert-button');
+
     $convert.on('click', function() {
       var $this = $(this);
       if (self.currentState === 'preview') {
@@ -91,6 +97,7 @@ var OnlineMarkdown = {
     if (params.preview) {
       $convert.trigger('click');
     }
+    cb && cb()
   },
 
   updateOutput: function () {
