@@ -107,6 +107,15 @@ var OnlineMarkdown = {
     $('#outputCtt li').each(function() {
       $(this).html('<span><span>' + $(this).html() + '</span></span>');
     });
+
+    var t = setTimeout(function(){
+      clearTimeout(t);
+      t = null;
+      var $h2s = $('#output h2')
+      $h2s.map(function(index,item){
+        $(item).append($('<i class="tri"></i>'));
+      })
+    },30)
   }
 };
 

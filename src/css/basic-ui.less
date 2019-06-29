@@ -39,9 +39,36 @@ h1, h2, h3, h4, h5, h6 {
   margin-bottom: 0.4rem;
   font-weight: normal;
   // color: #1A73E8;
-  color: #111;
+  // color: #555;
+  color: #000;
+  // color: gray;
   // color: #44B549;
   position: relative;
+
+  // padding:0 4px;
+  padding-left: 8px;
+}
+h1, h2, h3, h4, h5, h6{
+  &>.tri{
+    content: '';
+    position: absolute;
+    left: -2px;
+    width: 0;
+
+    // 侧边
+    // height: 1em;
+    // border-left: 3px solid #44B549;
+    // top: 50%;
+    // transform: translateY(-50%);
+
+    // 三角形
+    top: 10px;
+    border-left:3px solid transparent;
+    border-top:3px solid #44B549;
+    border-right:3px solid #44B549;
+    border-bottom:3px solid transparent;
+    transform: rotate(45deg);
+  }
 }
 
 p {
