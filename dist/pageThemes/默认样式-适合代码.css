@@ -21,6 +21,12 @@ center{
   color: #555!important;
   padding: 0 8px;
 }
+.wrapper p:empty{
+  display: none!important;
+}
+.wrapper p+br{
+  display: none!important;
+}
 
 .wrapper blockquote p{
   color: rgb(129, 145, 152)!important;
@@ -29,5 +35,8 @@ center{
 
 .wrapper ul li span, .wrapper ol li span {
   line-height: 1.4em;
+  /* color: red; */
+  /* font-size: 15px; */
   font-size: 14px !important;
 }
+

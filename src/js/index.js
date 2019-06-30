@@ -12,6 +12,9 @@ require("./showdown-plugins/showdown-footnote.js");
 
 // require("./google-code-prettify/run_prettify.js");
 
+let triImg = '<img width="8" height="8" class="tri" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQBAMAAADt3eJSAAAAD1BMVEUAAABEtUlCtUhFtUVEtUnj12+UAAAABHRSTlMAwGAwYRir0QAAADBJREFUCNdjYGAwYIACIRhDRAHGcIIxXBRgDCcYAygEZThhMBTQFSugG6iAYincGQD1rwbxPiJe5wAAAABJRU5ErkJggg==">';
+
+let triSvg = `<svg style="width: 10px;height: 10px;vertical-align: middle;margin-top: -5px;margin-left: -3px;" t="1561830622620" class="tri" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="3007" width="10" height="10" xmlns:xlink="http://www.w3.org/1999/xlink"><path d="M322.392 90.125l421.803 421.898-421.803 421.852v-843.75z" p-id="3008" fill="#44B549"></path></svg>`;
 
 var kv = location.href.split('?')[1];
 kv = kv && kv.split('&') || [];
@@ -68,7 +71,6 @@ var OnlineMarkdown = {
       },
       timeout: 2000
     }).then(function(data) {
-      // console.log(data)
       $('#input').val(data);
     });
   },
@@ -113,9 +115,22 @@ var OnlineMarkdown = {
       t = null;
       var $h2s = $('#output h2')
       $h2s.map(function(index,item){
-        $(item).append($('<i class="tri"></i>'));
+        var $item = $(item);
+        if (index===0) {
+          $item.prepend($('<i style="font-size:0px;">|</i>'+triSvg));
+        }
+        if ($item.find('svg').length>0) {
+          return;
+        }else{
+          $item.prepend($(triSvg));
+        }
       })
-    },30)
+
+      var $uls = $('#output ._list_');
+      $uls.map(function(index,item){
+        $(item).wrap('<p></p>')
+      })
+    },100)
   }
 };
 

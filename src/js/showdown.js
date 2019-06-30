@@ -2052,12 +2052,13 @@ showdown.subParser('lists', function (text, options, globals) {
         counterRxg = (listType === 'ul') ? olRgx : ulRgx,
         result = '';
 
+    // console.log(list)
     if (list.search(counterRxg) !== -1) {
       (function parseCL(txt) {
         var pos = txt.search(counterRxg);
         if (pos !== -1) {
           // slice
-          result += '\n<' + listType + '>\n' + processListItems(txt.slice(0, pos), !!trimTrailing) + '</' + listType + '>\n';
+          result += '\n<' + listType + ' class="_list_">\n' + processListItems(txt.slice(0, pos), !!trimTrailing) + '</' + listType + '>\n';
 
           // invert counterType and listType
           listType = (listType === 'ul') ? 'ol' : 'ul';
@@ -2066,13 +2067,14 @@ showdown.subParser('lists', function (text, options, globals) {
           //recurse
           parseCL(txt.slice(pos));
         } else {
-          result += '\n<' + listType + '>\n' + processListItems(txt, !!trimTrailing) + '</' + listType + '>\n';
+          result += '\n<' + listType + ' class="_list_">\n' + processListItems(txt, !!trimTrailing) + '</' + listType + '>\n';
         }
       })(list);
     } else {
-      result = '\n<' + listType + '>\n' + processListItems(list, !!trimTrailing) + '</' + listType + '>\n';
+      result = '\n<' + listType + ' class="_list_">\n' + processListItems(list, !!trimTrailing) + '</' + listType + '>\n';
     }
 
+    // console.log(typeof result)
     return result;
   }
 
