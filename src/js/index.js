@@ -57,8 +57,8 @@ var OnlineMarkdown = {
   start: function(cb) {
     this.bindEvt(cb);
     this.updateOutput();
-    new CodeTheme();
-    new PageTheme();
+    // new CodeTheme();
+    // new PageTheme();
     new Clipboard('.btn');
   },
   load: function() {
@@ -107,7 +107,7 @@ var OnlineMarkdown = {
     $('#output .wrapper').html(val);
     // PR.prettyPrint();
     $('#outputCtt li').each(function() {
-      $(this).html('<span><span>' + $(this).html() + '</span></span>');
+      $(this).html('<span>' + $(this).html() + '</span>');
     });
 
     var t = setTimeout(function(){
