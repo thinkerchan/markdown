@@ -101,8 +101,9 @@ var OnlineMarkdown = {
     }
     cb && cb()
   },
-
+  inserted:false,
   updateOutput: function () {
+    var _this = this;
     var val = converter.makeHtml($('#input').val());
     $('#output .wrapper').html(val);
     // PR.prettyPrint();
@@ -116,9 +117,11 @@ var OnlineMarkdown = {
       var $h2s = $('#output h2')
       $h2s.map(function(index,item){
         var $item = $(item);
-        if (index===0) {
+        if (index===0 && !_this.inserted) {
           $item.prepend($('<i style="font-size:0px;">|</i>'+triSvg));
+          _this.inserted = true;
         }
+
         if ($item.find('svg').length>0) {
           return;
         }else{
